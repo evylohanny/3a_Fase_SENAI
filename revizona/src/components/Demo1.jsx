@@ -16,7 +16,7 @@ function Demo1() {
     }
   return (
     <div className='container-demo1'>
-      <h2>Demo2</h2>
+      <h2>Demo1</h2>
       <button onClick={alertarUsuario}>Clica em mim</button>
       <button onClick={() => {alert("Executei uma arrow function")}}>Ex Arrow Function</button>
 

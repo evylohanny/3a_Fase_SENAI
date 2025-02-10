@@ -1,4 +1,9 @@
 .container-body{
-    background-color: lightgreen;
+    background-color: cadetblue;
     min-height: calc(100vh - 60px);
+    /* display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column; */
+    font-family: 'Popins', sans-serif;
 }
