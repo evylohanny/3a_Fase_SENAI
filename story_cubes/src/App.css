@@ -1,0 +1,92 @@
+.container-geral{
+  font-family: 'Popins', sans-serif;
+}
+
+.container-header{
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(61, 180, 176);
+  text-align: center;
+}
+
+h1{
+  color:mediumturquoise;
+}
+
+.container-botão{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+}
+
+.container-botão button{
+  height: 60px;
+  width: 150px;
+  border-radius: 100px;
+  background-color: lightblue;
+  border: none;
+  color: azure;
+  font-size: 25px;
+}
+
+.container-botão button:hover{
+  transition: 0.3s;
+  background-color: rgb(156, 197, 211);
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container-botão button:active{
+  transform: translateY(2px); 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container-reiniciar{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  height: 100px;
+}
+
+.container-reiniciar button{
+  height: 25px;
+  width: 90px;
+  border-radius: 100px;
+  background-color: lightcoral;
+  border: none;
+  color: azure;
+  font-size: 15px;
+}
+
+.container-reiniciar button:hover{
+  transition: 0.3s;
+  background-color: rgb(212, 115, 115);
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.container-reiniciar button:active{
+  transform: translateY(2px); 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.container-emoji{
+  height: 300px;
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-contador{
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  min-height: calc(100vh - 100px - 300px - 250px - 100px);
+}
