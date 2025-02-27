@@ -1,9 +1,21 @@
 //Função de conexão com o banco
 async function connect() {
-    const {Pool} = require("pg"); //Estratégia de conexão
-    const pool = new Pool({ //Declarando a variável
-    connectionString: process.env.CONNECTION_STRING //Ler dados da conexão
-    })
-    const client = await pool.connect(); //Retornar o resultado
-    console.log("Criou o Pool de conexão")
+    if (global.connection) {
+        return global.connection.connect();
+
+        const {Pool} = require("pg")
+        const Pool = new Pool({
+            connectionString: process.env.CONNECTION_STRING
+        })
+        const cliente = await Pool.connect();
+        console.log("criou o pool de conexão")
+
+        const res = await cliente.query("select now()");
+        console.log(res.rows[0]);
+        cliente.release();
+
+        global.connection = pool;
+        return pool.connect();
+    }
+    connect();
 }

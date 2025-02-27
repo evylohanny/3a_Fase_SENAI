@@ -1,5 +1,6 @@
 require("dotenv").config();//Carrega as variáveis do arquivo env
 
+const db = require("./db")
 const port = process.env.PORT;//Armazena o número da porta
 
 const express = require("express");
