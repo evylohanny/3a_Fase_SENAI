@@ -3,6 +3,7 @@ async function connect() {
     if (global.connection) {
         return global.connection.connect();
 
+    }
         const {Pool} = require("pg")
         const Pool = new Pool({
             connectionString: process.env.CONNECTION_STRING
@@ -18,4 +19,14 @@ async function connect() {
         return pool.connect();
     }
     connect();
-}
+
+    //Listagem 
+    async function selectCustomers() {//Selecionar os clientes do banco de dados
+        const client = await connect;
+        const res = await client.query("SELECT * FROM usuario");
+        return res.rows
+    }
+
+    module.exports = {
+        selectCustomers
+    }
